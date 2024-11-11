@@ -4,12 +4,103 @@ import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import thumbsup from "../assets/images/thumbsup.png";
+import magazine from "../assets/images/floating_magazine_mockup.png";
+import book from "../assets/images/books_mockup.png";
+import skitse from "../assets/images/skitse.png";
+import rs from "../assets/images/r_edition.svg";
+import inspo from "../assets/images/inspo.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		<h1>Index overskrift</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+<MainLayout title="Zonder typografi">
+	<article class="mt-[100px] lg:mt-[300px]">
+		<h2 class="text-xl lg:text-6xl">Zonder af Laura Backe</h2>
+		<div class="glass grid lg:grid-cols-2">
+	
+				<div class="mx-6 mt-1 ml-8 w-[250px]  lg:w-[590px]">
+					<h3 class=" w-[280px] md:w-[590px] lg:text-[40px] ml-2 mt-6 mb-10">En organisk font, som hylder og udfordrer serif’en. <br>
+						Med stærke kontraster, skaber denne typografi spænding og elegance i én. </h3>
+		
+						<p class=" w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl">Med udgangspunkt i en modulær opbygning og kontrastfyldte detaljer har jeg udviklet en ny skrift, der forener orden og elegance med en organisk bevægelse. </p>
+
+						<p class="w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl mt-4">	De kontrastfyldte linjetykkelser tilføjer dybde og dynamik, der afspejler menneskelivets følelsesmæssige op- og nedture. Trods den strukturerede opbygning bevarer skriften en organisk blødhed i sine former og overgange, hvilket gør den imødekommende og empatisk. Skriften egner sig særligt til brug i kontekst, hvor man vil fremhæve komplekse og dybtgående historier.</p>
+				</div>
+				<div class=" w-3/4 h-2/3 pb-60">
+					<div class="rotate-45 lg:w-[800px]"><Image  src={magazine} alt="magasin mockup"></Image></div>
+					<div class=" lg:w-[800px]"><Image  src={book} alt="bøger mockup"></Image></div>
+
+				</div>
+		</div>
+		<div class="circle1"></div>
 	</article>
+
+	<article class="mt-[300px]">
+	<div class=" flex flex-row-reverse mr-6">	<h2 class="text-xl lg:text-6xl">Indblik i processen</h2></div>
+		<div class="glass grid lg:grid-cols-2">
+				<div class="m-6 ml-8 lg:w-[590px]">
+		<div>
+			
+							<p class="text-base lg:text-2xl">Denne font er inspireret af Art Deco-typografiens stil, i dens dekorative og kontrastfulde elegance. Jeg vil gerne have den gav en nostalgisk “whimsical” fornemmelse, samtidig med et moderne oragnisk udtryk. </p>
+	
+							<p class="text-base lg:text-2xl mt-4">Jeg skabte fonten modulært, for at give et menneskelig touch.</p>
+		</div>
+		<div class="mt-4">
+			<Image  src={skitse} alt="bøger mockup"></Image>
+			<span class="text-right">skitser af Zonder</span>
+		</div>
+				</div>
+				<div class="m-6 mr-8">
+					<div class=""><Image  src={inspo} alt="inspo typo"></Image>
+						<span class="text-right">inspiration til typografi</span>
+						</div>
+						<div class="mt-6"><Image  src={rs} alt="forskellige r'er"></Image>
+							<span class="text-right">forskellige udkast af r</span>
+							</div>
+
+				</div>
+		</div>
+		<div class="circle2"></div>
+	</article>
+
 </MainLayout>
+
+
+<style>
+	.glass {
+
+		background-color: rgba(255, 255, 255, 0.3);
+		backdrop-filter: blur(10px);
+		margin: 60px;
+		flex: 0 1 300px;
+		box-shadow: 0 2px 20px rgba(29, 28, 31, 0.5);
+		border-radius: 20px;
+		position: relative; /* Make sure the glass div can have other elements positioned relative to it */
+		z-index: 2; /* Ensure it stays above the circle */
+	}
+
+	.circle1 {
+		background-color: #F05529;
+		border-radius: 50%;
+		height: 600px;
+		width: 600px;
+		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
+		top: 160%; /* Center vertically */
+		left: 15%; /* Center horizontally */
+		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
+		z-index: 1; /* Ensure it stays behind the glass div */
+	}
+	.circle2 {
+		background-color: #F05529;
+		border-radius: 50%;
+		height: 600px;
+		width: 600px;
+		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
+		top: 3000px; /* Center vertically */
+		left: 80%; /* Center horizontally */
+		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
+		z-index: 1; /* Ensure it stays behind the glass div */
+	}
+	h2 {
+		z-index: 10;
+		position: relative;
+		margin-left: 4rem;
+	}
+</style>

@@ -1,5 +1,16 @@
 ---
+import { Image } from 'astro:assets';
+import zonder_o from "../assets/images/zonder_o.svg";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+<div class="background ">
+   <div> <Image  src={zonder_o} alt="Zonder"></Image></div>
+<div class="flex flex-row-reverse">
+       <p class="text-right mt-8 mr-6 lg:w-[697px] lg:h-[159px] text-sm lg:text-2xl "> (noun) a modular typeface capturing the realization that each passerby lives a life as vivid and complex as our own, woven with elegant contrasts and organic flow to reflect the layered stories within us all.</p>
+    
+</div></div>
+
+<style>
+    .background{
+        background: linear-gradient(180deg, rgba(240, 85, 41, 0.53) 0%, rgba(152, 127, 1, 0.00) 100%);
+    }
+</style>
