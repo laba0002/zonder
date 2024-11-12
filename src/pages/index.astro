@@ -13,19 +13,19 @@ import mockup from "../assets/images/mockup.png";
 import Circle from "../components/Circle.astro";
 ---
 <MainLayout title="Zonder typografi">
-	<article class="mt-[210px] lg:mt-[300px] relative">
+	<article class="mt-[210px] lg:mt-[300px] relative section">
 		<h2 class="text-xl mr-2 lg:text-6xl">Zonder af Laura Backe</h2>
 		<div class="glass grid lg:grid-cols-2">
 	
 				<div class="mx-6 mt-1 ml-8 w-[250px]  lg:w-[590px]">
-					<h3 class=" w-[280px] md:w-[590px] lg:text-[40px] ml-2 mt-6 mb-10">En organisk font, som hylder og udfordrer serif'en. 
-						Med stærke kontraster, skaber denne typografi spænding og elegance i én. </h3>
+					<h3 class=" w-[280px] md:w-[590px] lg:text-[40px] ml-2 mt-6 mb-10">En <mark class="text-[#192557]">organisk</mark> font, som hylder og udfordrer serif'en. 
+						Med stærke <mark class="text-[#192557]">kontraster</mark>, skaber denne typografi spænding og elegance i én. </h3>
 		
 						<p class=" w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl">Med udgangspunkt i en modulær opbygning og kontrastfyldte detaljer har jeg udviklet en ny skrift, der forener orden og elegance med en organisk bevægelse. </p>
 
 						<p class="w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl mt-6">	De kontrastfyldte linjetykkelser tilføjer dybde og dynamik, der afspejler menneskelivets følelsesmæssige op- og nedture. Trods den strukturerede opbygning bevarer skriften en organisk blødhed i sine former og overgange, hvilket gør den imødekommende og empatisk. Skriften egner sig særligt til brug i kontekst, hvor man vil fremhæve komplekse og dybtgående historier.</p>
 				</div>
-				<div class="pb-4">
+				<div class="pb-4 transition-all hover:scale-110">
 					<!-- <div class="rotate-45 lg:w-[800px]"><Image  src={magazine} alt="magasin mockup"></Image></div>
 					<div class=" lg:w-[800px]"><Image  src={book} alt="bøger mockup"></Image></div> -->
 					<Image  src={mockup} alt="bøger mockup"></Image>
@@ -35,26 +35,26 @@ import Circle from "../components/Circle.astro";
 		<div class="circle1"> <Circle></Circle> </div>
 	</article>
 
-	<article class="mt-[300px] relative">
+	<article class="mt-[300px] relative section1">
 	<div class=" flex flex-row-reverse mr-6">	<h2 class="text-xl lg:text-6xl">Indblik i processen</h2></div>
 		<div class="glass grid lg:grid-cols-2">
 				<div class="m-6 ml-8 lg:w-[590px]">
 		<div class="m-4">
 			
-							<p class="text-base lg:text-2xl">Denne font er inspireret af Art Deco-typografiens stil, i dens dekorative og kontrastfulde elegance. Jeg vil gerne have den gav en nostalgisk “whimsical” fornemmelse, samtidig med et moderne oragnisk udtryk. </p>
+							<p class="text-base lg:text-2xl">Denne font er inspireret af Art Deco-typografiens stil, i dens dekorative og kontrastfulde elegance. Jeg vil gerne have den gav en <mark>nostalgisk</mark> “whimsical” fornemmelse, samtidig med et moderne oragnisk udtryk. </p>
 	
-							<p class="text-base lg:text-2xl mt-4">Jeg skabte fonten modulært, for at give et menneskelig touch.</p>
+							<p class="text-base lg:text-2xl mt-4">Jeg skabte fonten <mark>modulært</mark>, for at give et menneskelig touch.</p>
 		</div>
 		<div class="mt-4 m-4">
-			<Image  src={skitse} alt="bøger mockup"></Image>
+			<div class="overflow-hidden"><Image  src={skitse} alt="bøger mockup" class="transition-all hover:scale-110"></Image></div>
 			<span class="text-right">skitser af Zonder</span>
 		</div>
 				</div>
 				<div class="m-6 ml-8">
-					<div class="lg:ml-20 mb-6"><Image  src={inspo} alt="inspo typo"></Image>
+					<div class="lg:ml-20 mb-6 overflow-hidden"><Image  src={inspo} alt="inspo typo" class="transition-all hover:scale-110"></Image>
 						<span class="text-right">inspiration til typografi</span>
 						</div>
-						<div class="mt-8 lg:ml-20  mb-6"><Image  src={rs} alt="forskellige r'er"></Image>
+						<div class="mt-8 lg:ml-20  mb-6 overflow-hidden"><Image  src={rs} alt="forskellige r'er" class="transition-all hover:scale-110"></Image>
 							<span class="text-right">forskellige udkast af r</span>
 							</div>
 
@@ -64,6 +64,25 @@ import Circle from "../components/Circle.astro";
 	</article>
 
 </MainLayout>
+
+
+<script>
+	import { inView } from "motion";
+
+	const inviewelement = document.querySelector(".section");
+	inView(
+		inviewelement , () => {
+			inviewelement.classList.add("animate__animated","animate__fadeInUp", "animate__delay-1s")
+		})
+
+		const inviewelement3 = document.querySelector(".section1");
+	inView(
+		inviewelement3 , () => {
+			inviewelement3.classList.add("animate__animated","animate__fadeIn", "animate__delay-1s")
+		})
+		
+
+</script>
 
 
 <style>

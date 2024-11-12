@@ -51,6 +51,12 @@ p {
   font-weight: 400;
 }
 
+mark {
+  font-weight: 500;
+  background-color: transparent;
+  font-style: italic;
+}
+
 span {
   font-style: italic;
   font-weight: 300;
