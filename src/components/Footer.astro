@@ -3,21 +3,27 @@ import { Image } from 'astro:assets';
 import halvcirkel from "../assets/images/halvcirkel.svg";
 ---
 <div class="mt-[100px] lg:mt-[200px]">
-    <a href="#top" class="cursor-pointer  container flex flex-row items-center">
+    <a href="#top" class="cursor-pointer container ">
         
-            <div class="cursor-pointer w-1/2 md:w-full"> <Image  src={halvcirkel} alt="knap"></Image></div>
+            <div class="cursor-pointer "> <Image  src={halvcirkel} alt="knap"></Image></div>
             <h2 class="cursor-pointer text-center font-light text-2xl lg:text-6xl">Tilbage <br> til toppen</h2>
        
     </a>
 </div>
 
 <style>
-    .container{
+    div  .container{
         display: grid;
         place-items: center;
     }
-    .container div, h2{
+    div  .container div, div .container h2{
         grid-area: 1/1;
+    }
+
+    @media (max-width: 1000px) {
+        div  .container div{
+            width: 220px;
+        }
     }
 </style>
   
