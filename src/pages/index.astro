@@ -11,7 +11,7 @@ import rs from "../assets/images/r_edition.svg";
 import inspo from "../assets/images/inspo.png";
 ---
 <MainLayout title="Zonder typografi">
-	<article class="mt-[100px] lg:mt-[300px]">
+	<article class="mt-[210px] lg:mt-[300px]">
 		<h2 class="text-xl lg:text-6xl">Zonder af Laura Backe</h2>
 		<div class="glass grid lg:grid-cols-2">
 	
@@ -36,22 +36,22 @@ import inspo from "../assets/images/inspo.png";
 	<div class=" flex flex-row-reverse mr-6">	<h2 class="text-xl lg:text-6xl">Indblik i processen</h2></div>
 		<div class="glass grid lg:grid-cols-2">
 				<div class="m-6 ml-8 lg:w-[590px]">
-		<div>
+		<div class="m-4">
 			
 							<p class="text-base lg:text-2xl">Denne font er inspireret af Art Deco-typografiens stil, i dens dekorative og kontrastfulde elegance. Jeg vil gerne have den gav en nostalgisk “whimsical” fornemmelse, samtidig med et moderne oragnisk udtryk. </p>
 	
 							<p class="text-base lg:text-2xl mt-4">Jeg skabte fonten modulært, for at give et menneskelig touch.</p>
 		</div>
-		<div class="mt-4">
+		<div class="mt-4 m-4">
 			<Image  src={skitse} alt="bøger mockup"></Image>
 			<span class="text-right">skitser af Zonder</span>
 		</div>
 				</div>
-				<div class="m-6 mr-8">
-					<div class=""><Image  src={inspo} alt="inspo typo"></Image>
+				<div class="m-6 ml-8">
+					<div class="lg:ml-20 mb-6"><Image  src={inspo} alt="inspo typo"></Image>
 						<span class="text-right">inspiration til typografi</span>
 						</div>
-						<div class="mt-6"><Image  src={rs} alt="forskellige r'er"></Image>
+						<div class="mt-8 lg:ml-20  mb-6"><Image  src={rs} alt="forskellige r'er"></Image>
 							<span class="text-right">forskellige udkast af r</span>
 							</div>
 
@@ -68,7 +68,7 @@ import inspo from "../assets/images/inspo.png";
 
 		background-color: rgba(255, 255, 255, 0.3);
 		backdrop-filter: blur(10px);
-		margin: 60px;
+		margin: 15px 60px 60px 60px;
 		flex: 0 1 300px;
 		box-shadow: 0 2px 20px rgba(29, 28, 31, 0.5);
 		border-radius: 20px;
@@ -82,7 +82,7 @@ import inspo from "../assets/images/inspo.png";
 		height: 600px;
 		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 160%; /* Center vertically */
+		top: 190%; /* Center vertically */
 		left: 15%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
@@ -93,8 +93,8 @@ import inspo from "../assets/images/inspo.png";
 		height: 600px;
 		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 3000px; /* Center vertically */
-		left: 80%; /* Center horizontally */
+		top: 455%; /* Center vertically */
+		left: 88%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
 	}
@@ -103,4 +103,19 @@ import inspo from "../assets/images/inspo.png";
 		position: relative;
 		margin-left: 4rem;
 	}
+
+	@media (max-width: 710px) {
+       .circle1{
+		height: 400px;
+		width: 400px;
+		top: 690px; /* Center vertically */
+		left: 15%; /* Center horizontally */
+	   }
+	   .circle2{
+		height: 400px;
+		width: 400px;
+		top: 2300px; /* Center vertically */
+		left: 80%; /* Center horizontally */
+	   }
+    }
 </style>
