@@ -1,6 +1,23 @@
 ---
+import { Image } from 'astro:assets';
+import halvcirkel from "../assets/images/halvcirkel.svg";
 ---
-<div>
-<p>Footer - tilføj footerindhold</p>
+<div class="mt-[100px] lg:mt-[200px]">
+    <a href="#top" class="cursor-pointer  container flex flex-row items-center">
+        
+            <div class="cursor-pointer w-1/2 md:w-full"> <Image  src={halvcirkel} alt="knap"></Image></div>
+            <h2 class="cursor-pointer text-center font-light text-2xl lg:text-6xl">Tilbage <br> til toppen</h2>
+       
+    </a>
 </div>
+
+<style>
+    .container{
+        display: grid;
+        place-items: center;
+    }
+    .container div, h2{
+        grid-area: 1/1;
+    }
+</style>
   
