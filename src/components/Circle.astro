@@ -1,0 +1,65 @@
+---
+
+---
+
+<div class="circle"> </div>
+
+<style>
+    .circle {
+        background-color: #F05529;
+		border-radius: 50%;
+		height: 500px;
+		width: 500px;
+            position: absolute;
+            margin: auto;
+      
+            border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            animation: fluid-anim 5s infinite linear;
+            z-index: 1;
+        }
+         
+        @keyframes fluid-anim
+        {
+            0%
+            {
+                border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            }
+            25%
+            {
+                border-radius: 45% 55% 48% 52% / 60% 36% 64% 40% ;
+            }
+            50%
+            {
+                border-radius: 56% 44% 28% 72% / 46% 63% 37% 54% ;
+            }
+            75%
+            {
+                border-radius: 62% 38% 37% 63% / 39% 32% 68% 61% ;
+            }
+            100%
+            {
+                border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            }
+        }
+        
+        .disclaimer
+        {
+            margin: auto; 
+            margin-bottom: 50px;
+            width: fit-content;
+            color: rgb(0, 0, 0);
+            text-align: center;
+            font-family: 'Belanosima', sans-serif;
+        }
+        .disclaimer a
+        {
+            text-decoration: none;
+            color: #202020;
+            font-family: "Kaushan Script", cursive;
+            font-weight: 900;
+        }
+        .disclaimer a:hover
+        {
+            text-decoration: overline;
+        }
+</style>
