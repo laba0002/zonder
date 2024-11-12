@@ -3,12 +3,12 @@ import { Image } from 'astro:assets';
 import halvcirkel from "../assets/images/halvcirkel.svg";
 import Circle from './Circle.astro';
 ---
-<div class="mt-[100px] lg:mt-[200px]">
+ <div class="mt-[100px] lg:mt-[200px]">
     <a href="#top" class="cursor-pointer container ">
         
             <div class="cursor-pointer "> <Image  src={halvcirkel} alt="knap"></Image></div>
             <h2 class="cursor-pointer text-center font-light text-2xl lg:text-6xl">Tilbage <br> til toppen</h2>
-       <Circle></Circle>
+
     </a>
 </div>
 
@@ -26,5 +26,60 @@ import Circle from './Circle.astro';
             width: 220px;
         }
     }
-</style>
-  
+</style> 
+
+
+<!-- <div class="mt-[100px] lg:mt-[200px]">
+  <a href="#top">
+        <h2 class="cursor-pointer text-center font-light text-2xl lg:text-6xl">Tilbage <br> til toppen</h2>
+        <div class="halfcircle"></div>
+  </a>
+</div>
+
+<style>
+    .halfcircle {
+        width: 20rem;
+  height: 10rem;
+  background-color: #48abe0;
+  border-radius: 10rem 10rem 0 0;
+            margin: auto;
+      
+            border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            animation: fluid-anim 5s infinite linear;
+            z-index: 1;
+        }
+         
+        @keyframes fluid-anim
+        {
+            0%
+            {
+                border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            }
+            25%
+            {
+                border-radius: 45% 55% 48% 52% / 60% 36% 64% 40% ;
+            }
+            50%
+            {
+                border-radius: 56% 44% 28% 72% / 46% 63% 37% 54% ;
+            }
+            75%
+            {
+                border-radius: 62% 38% 37% 63% / 39% 32% 68% 61% ;
+            }
+            100%
+            {
+                border-radius: 39% 61% 55% 45% / 44% 37% 63% 56% ;
+            }
+        }
+        
+
+	@media (max-width: 710px) {
+       .circle{
+		height: 200px;
+		width: 200px;
+
+	   }
+    }
+
+</style> -->

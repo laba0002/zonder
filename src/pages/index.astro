@@ -10,6 +10,7 @@ import skitse from "../assets/images/skitse.png";
 import rs from "../assets/images/r_edition.svg";
 import inspo from "../assets/images/inspo.png";
 import mockup from "../assets/images/mockup.png";
+import Circle from "../components/Circle.astro";
 ---
 <MainLayout title="Zonder typografi">
 	<article class="mt-[210px] lg:mt-[300px] relative">
@@ -31,7 +32,7 @@ import mockup from "../assets/images/mockup.png";
 
 				</div>
 		</div>
-		<div class="circle1"></div>
+		<div class="circle1"> <Circle></Circle> </div>
 	</article>
 
 	<article class="mt-[300px] relative">
@@ -59,7 +60,7 @@ import mockup from "../assets/images/mockup.png";
 
 				</div>
 		</div>
-		<div class="circle2"></div>
+		<div class="circle2"> <Circle></Circle></div>
 	</article>
 
 </MainLayout>
@@ -79,24 +80,16 @@ import mockup from "../assets/images/mockup.png";
 	}
 
 	.circle1 {
-		background-color: #F05529;
-		border-radius: 50%;
-		height: 600px;
-		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 19%; /* Center vertically */
-		left: 15%; /* Center horizontally */
+		top: -11%; /* Center vertically */
+		left: 1%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
 	}
 	.circle2 {
-		background-color: #F05529;
-		border-radius: 50%;
-		height: 600px;
-		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 27%; /* Center vertically */
-		left: 84%; /* Center horizontally */
+		top: -11%; /* Center vertically */
+		left: 64%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
 	}
@@ -108,14 +101,12 @@ import mockup from "../assets/images/mockup.png";
 
 	@media (max-width: 710px) {
        .circle1{
-		height: 400px;
-		width: 400px;
+
 		top: 690px; /* Center vertically */
 		left: 15%; /* Center horizontally */
 	   }
 	   .circle2{
-		height: 400px;
-		width: 400px;
+
 		top: 2300px; /* Center vertically */
 		left: 80%; /* Center horizontally */
 	   }
