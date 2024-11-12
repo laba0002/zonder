@@ -9,30 +9,32 @@ import book from "../assets/images/books_mockup.png";
 import skitse from "../assets/images/skitse.png";
 import rs from "../assets/images/r_edition.svg";
 import inspo from "../assets/images/inspo.png";
+import mockup from "../assets/images/mockup.png";
 ---
 <MainLayout title="Zonder typografi">
-	<article class="mt-[210px] lg:mt-[300px]">
-		<h2 class="text-xl lg:text-6xl">Zonder af Laura Backe</h2>
+	<article class="mt-[210px] lg:mt-[300px] relative">
+		<h2 class="text-xl mr-2 lg:text-6xl">Zonder af Laura Backe</h2>
 		<div class="glass grid lg:grid-cols-2">
 	
 				<div class="mx-6 mt-1 ml-8 w-[250px]  lg:w-[590px]">
-					<h3 class=" w-[280px] md:w-[590px] lg:text-[40px] ml-2 mt-6 mb-10">En organisk font, som hylder og udfordrer serif’en. <br>
+					<h3 class=" w-[280px] md:w-[590px] lg:text-[40px] ml-2 mt-6 mb-10">En organisk font, som hylder og udfordrer serif'en. 
 						Med stærke kontraster, skaber denne typografi spænding og elegance i én. </h3>
 		
 						<p class=" w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl">Med udgangspunkt i en modulær opbygning og kontrastfyldte detaljer har jeg udviklet en ny skrift, der forener orden og elegance med en organisk bevægelse. </p>
 
-						<p class="w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl mt-4">	De kontrastfyldte linjetykkelser tilføjer dybde og dynamik, der afspejler menneskelivets følelsesmæssige op- og nedture. Trods den strukturerede opbygning bevarer skriften en organisk blødhed i sine former og overgange, hvilket gør den imødekommende og empatisk. Skriften egner sig særligt til brug i kontekst, hvor man vil fremhæve komplekse og dybtgående historier.</p>
+						<p class="w-[280px]  md:w-[590px] ml-2 text-base lg:text-2xl mt-6">	De kontrastfyldte linjetykkelser tilføjer dybde og dynamik, der afspejler menneskelivets følelsesmæssige op- og nedture. Trods den strukturerede opbygning bevarer skriften en organisk blødhed i sine former og overgange, hvilket gør den imødekommende og empatisk. Skriften egner sig særligt til brug i kontekst, hvor man vil fremhæve komplekse og dybtgående historier.</p>
 				</div>
-				<div class=" w-3/4 h-2/3 pb-60">
-					<div class="rotate-45 lg:w-[800px]"><Image  src={magazine} alt="magasin mockup"></Image></div>
-					<div class=" lg:w-[800px]"><Image  src={book} alt="bøger mockup"></Image></div>
+				<div class="pb-4">
+					<!-- <div class="rotate-45 lg:w-[800px]"><Image  src={magazine} alt="magasin mockup"></Image></div>
+					<div class=" lg:w-[800px]"><Image  src={book} alt="bøger mockup"></Image></div> -->
+					<Image  src={mockup} alt="bøger mockup"></Image>
 
 				</div>
 		</div>
 		<div class="circle1"></div>
 	</article>
 
-	<article class="mt-[300px]">
+	<article class="mt-[300px] relative">
 	<div class=" flex flex-row-reverse mr-6">	<h2 class="text-xl lg:text-6xl">Indblik i processen</h2></div>
 		<div class="glass grid lg:grid-cols-2">
 				<div class="m-6 ml-8 lg:w-[590px]">
@@ -82,7 +84,7 @@ import inspo from "../assets/images/inspo.png";
 		height: 600px;
 		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 190%; /* Center vertically */
+		top: 19%; /* Center vertically */
 		left: 15%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
@@ -93,8 +95,8 @@ import inspo from "../assets/images/inspo.png";
 		height: 600px;
 		width: 600px;
 		position: absolute; /* Position it relative to its closest positioned ancestor (MainLayout) */
-		top: 455%; /* Center vertically */
-		left: 88%; /* Center horizontally */
+		top: 27%; /* Center vertically */
+		left: 84%; /* Center horizontally */
 		transform: translate(-50%, -50%); /* Offset the element to perfectly center it */
 		z-index: 1; /* Ensure it stays behind the glass div */
 	}
